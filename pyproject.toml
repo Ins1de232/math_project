@@ -2,6 +2,31 @@
 name = "brain_games"
 version = "0.1.0"
 description = "Brain Games project"
+dependencies = [
+    "prompt>=0.4.1",
+]
 
 [project.scripts]
 brain-games = "brain_games.scripts.brain_games:main"
+brain-even = "brain_games.scripts.brain_even:main"
+brain-calc = "brain_games.scripts.brain_calc:brain_calc"
+brain-gcd = "brain_games.scripts.brain_gcd:brain_gcd"
+brain-progression = "brain_games.scripts.brain_progression:brain_progression"
+brain-prime = "brain_games.scripts.brain_prime:brain_prime"
+
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.1",
+]
+
+[tool.ruff]
+line-length = 80
+
+[lint.per-file-ignores]
+  # init modules can contain the local imports, logic, unused imports
+"__init__.py" = ["F401"]
+
+[lint]
+preview = true
+select = ["E", "F", "I", "C90"]
