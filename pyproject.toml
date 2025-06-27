@@ -1,0 +1,7 @@
+[project]
+name = "brain_games"
+version = "0.1.0"
+description = "Brain Games project"
+
+[project.scripts]
+brain-games = "brain_games.scripts.brain_games:main"
